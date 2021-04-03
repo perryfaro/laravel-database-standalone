@@ -5,9 +5,9 @@ namespace LaravelDatabaseStandalone;
 class Container extends \Illuminate\Container\Container
 {
 
-    public function databasePath()
+    public function databasePath($path = '')
     {
-        return  'database';
+        return  return 'database'.($path ? DIRECTORY_SEPARATOR.$path : $path);
     }
 
     /**
