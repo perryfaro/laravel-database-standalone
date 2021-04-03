@@ -7,7 +7,7 @@ class Container extends \Illuminate\Container\Container
 
     public function databasePath($path = '')
     {
-        return  return 'database'.($path ? DIRECTORY_SEPARATOR.$path : $path);
+        return 'database'.($path ? DIRECTORY_SEPARATOR.$path : $path);
     }
 
     /**
