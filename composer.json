@@ -1,0 +1,20 @@
+{
+    "name": "perryfaro/laravel-database-standalone",
+    "description": "Stand alone setup for laravel database package with migrations",
+    "require": {
+        "illuminate/database": "^8.35",
+        "illuminate/console": "^8.35",
+        "illuminate/events": "^8.35",
+        "illuminate/filesystem": "^8.35",
+        "illuminate/pagination": "^8.35",
+        "fakerphp/faker": "^1.14",
+        "symfony/finder": "^5.2",
+        "illuminate/container": "^8.35"
+    },
+    "bin": ["bin/database-standalone"],
+    "autoload": {
+        "psr-4": {
+            "LaravelDatabaseStandalone\\": ""
+        }
+    }
+}

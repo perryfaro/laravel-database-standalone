@@ -1,0 +1,25 @@
+#!/usr/bin/env php
+<?php
+
+use Illuminate\Support\Facades\Facade;
+use LaravelDatabaseStandalone\Manager;
+
+require __DIR__ . '/vendor/autoload.php';
+
+require 'bootstrap/database.console.php';
+
+Facade::setFacadeApplication(Manager::getInstance()->getContainer());
+
+function database_path()
+{
+    return Manager::getInstance()->getContainer()->databasePath();
+}
+
+$consoleHelper = new LaravelDatabaseStandalone\ConsoleHelper;
+
+$status = $consoleHelper->handle(
+    $input = new Symfony\Component\Console\Input\ArgvInput,
+    new Symfony\Component\Console\Output\ConsoleOutput
+);
+
+exit($status);
