@@ -1,6 +1,7 @@
 {
     "name": "perryfaro/laravel-database-standalone",
     "description": "Stand alone setup for laravel database package with migrations",
+    "license": "MIT",
     "require": {
         "illuminate/database": "^8.35",
         "illuminate/console": "^8.35",
